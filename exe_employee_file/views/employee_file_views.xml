@@ -13,6 +13,16 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="employee_file_search_inherit">
+    <field name="name">exe.employee.file.search.inherit</field>
+    <field name="model">hr.employee</field>
+    <field name="inherit_id" ref="hr.view_employee_filter"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='job_id']" position="after">
+                <field name="employee_file" string="Legajo" icon="fa-building" select="multi" enable_counters="1"/>   
+        </xpath>
+    </field>
+    </record>
   </data>
 </odoo>
 
